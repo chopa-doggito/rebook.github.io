@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donaciones</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial;
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .contenedor {
+            width: 350px;
+            background-color: #18191b;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: white;
+            margin: 0 0 15px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        /* Estilos del formulario */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            color: white;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            padding: 10px;
+            background-color: #474b4e;
+            border: 1px solid white;
+            color: white;
+            border-radius: 5px;
+            outline: none;
+        }input[type="text"]:hover,input[type="number"]:hover{
+            scale: 1.1;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            border-color: #33ccff;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="checkbox"]:hover{
+            scale: 1.1;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #474b4e;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 1px solid white;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: black;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .link a {
+            color: #33ccff;
+            text-decoration: none;
+        }
+
+        .link a:hover {
+            text-decoration: underline;
+            color: #2699e6;
+        }
+        p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Re-Book</h1>
+        <h2>¡Gracias por Donar!</h2>
+        <form>
+            <p>Selecciona El Material Que Vas A Donar:</p>
+            <!--<label>
+                 Cuaderno<input type="checkbox" name="Materiales[]" value="Cuaderno">
+            </label>
+            <label>
+                Libros<input type="checkbox" name="Materiales[]" value="Libros"> 
+            </label>-->
+            <p>Cuadernos:<input type="number" name="Cuadernos" min="0" placeholder="0" required></p>
+            <p>Libros:<input type="number" name="Libros" min="0" placeholder="0" required></p>
+            
+            <input type="radio" name="Centro" value="CBtis164"><label>CBtis164:</label>
+            <input type="radio" name="Centro" value="CBta12"><label>CBta12:</label>
+            <input type="radio" name="Centro" value="CBtis109"><label>CBtis109:</label>
+
+            
+            <label for="Cantidad">Cantidad:</label>
+            <input type="number" id="Cantidad" name="Cantidad" required min="1" placeholder="0">
+            
+            <!--<label for="Direccion">Dirección:</label>
+            <input type="text" id="Direccion" name="Direccion" required placeholder="Escribe tu dirección">-->
+            
+            <input type="submit" value="Donar">
+        </form>
+    </div>
+</body>
+</html>
